@@ -92,7 +92,7 @@ resource "aws_security_group" "sg_22" {
 
 resource "aws_key_pair" "mykey" {
   key_name = "mykey"
-  public_key = "${file("${var.PATH_TO_PUBLIC_KEY}")}"
+  public_key = "${file("${var.public_key_path}")}"
 }
 resource "aws_instance" "testInstance" {
   ami           = "${var.instance_ami}"
